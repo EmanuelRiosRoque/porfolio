@@ -1,0 +1,38 @@
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 80s linear infinite;
+}
+
+.logo-card {
+    width: 15rem; /* Ancho */
+    height: 15rem; /* Alto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.1) 0%,   /* Esquina superior izquierda */
+        rgba(14, 14, 14, 1) 50%,       /* Centro con el mismo color del fondo */
+        rgba(255, 255, 255, 0.1) 100%  /* Esquina inferior derecha */
+    );
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+}
+
+.logo-card img {
+    filter: grayscale(100%);
+    width: 5rem;
+    height: 8rem;
+}
